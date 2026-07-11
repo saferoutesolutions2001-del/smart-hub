@@ -18,72 +18,73 @@
 <body>
 
 <h1>Privacy Policy — JRM SmartRoute</h1>
-<p class="meta">Effective date: 4 July 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
+<p class="meta">Effective date: 10 July 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
 
-<p>SafeRoute Solutions ("we", "us", "our") operates the JRM SmartRoute mobile application (the "App"), used by drivers to view company-published routes, hazard alerts, authorized rest stops, and route weather guidance. This policy explains what information the App collects, how it is used, and the choices you have. The App is provided to drivers by their employer or logistics depot for operational and safety purposes — it is not available to the general public on an open sign-up basis.</p>
+<p>SafeRoute Solutions ("we", "us", "our") operates the JRM SmartRoute mobile application (the "App"), used by drivers to view company-published routes, hazard alerts, authorized rest stops, and route weather guidance. This policy explains what information the App collects from you, how it is used, and the choices you have.</p>
 
-<h2>1. Information We Collect</h2>
+<p><strong>The App does not require you to create an account, sign in, or provide a name, username, password, or email address.</strong> There is no in-app authentication of any kind. Access is set up at the depot/company level: when a logistics depot becomes our customer, we make that depot's routes and safety data available on our servers. A driver using the App simply enters the 4-digit Depot ID given to them by their depot — there is no personal login step, and the App does not verify who the individual driver is.</p>
+
+<h2>1. Information We Collect From You</h2>
 <table>
 <tr><th>Category</th><th>What we collect</th><th>Why</th></tr>
 <tr>
-  <td>Account &amp; employment information</td>
-  <td>Employee ID / username, company or depot name, and email address</td>
-  <td>To authenticate you as an authorized driver for your depot (one-time-password email verification) and to associate route/hazard data with the correct depot</td>
+  <td>Depot &amp; vehicle identifiers</td>
+  <td>The 4-digit Depot ID you enter, and the vehicle number you enter</td>
+  <td>To fetch the routes, hazards, and rest-stop data published for your depot, and to identify a vehicle in an SOS alert. Neither is a personal account — they are not paired with a name, email, or password</td>
 </tr>
 <tr>
   <td>Location information</td>
-  <td>Precise (GPS) and approximate device location, collected only while the App is open and in use</td>
-  <td>To show your position on the route map, to alert you to nearby hazards and authorized rest stops, and to provide turn-by-turn route guidance</td>
+  <td>Precise (GPS) device location, used on-device for the map and hazard-proximity alerts. Location is sent to our servers only at the moment you press the in-app SOS button</td>
+  <td>To show your position on the route map and alert you to nearby hazards and authorized rest stops (all on-device), and — only if you trigger SOS — to send your location, vehicle number, depot ID, current destination, and an optional name you may type in, so your depot can respond to the emergency</td>
 </tr>
 <tr>
   <td>Camera</td>
   <td>Live camera feed, used only when you open the in-app QR scanner</td>
-  <td>To scan QR codes (e.g. for quick destination or route lookup). Camera images are processed on-device only and are never stored, saved to your gallery, or transmitted to our servers</td>
+  <td>To scan a QR code for quick destination lookup. The camera feed is decoded on-device only; no image or video is ever stored, saved to your gallery, or transmitted to our servers</td>
 </tr>
 <tr>
   <td>App preferences (stored on your device only)</td>
   <td>Depot ID, vehicle number, selected destination, language preference, and whether hazard voice alerts are enabled</td>
-  <td>To remember your settings between sessions. These values are stored locally on your device and are only sent to our servers where needed to fetch the correct route/hazard data for your depot</td>
-</tr>
-<tr>
-  <td>Route &amp; sync data</td>
-  <td>The published routes, hazards, and safety guidance your depot has made available, downloaded to your device for offline use</td>
-  <td>To let you view your assigned routes and safety information, including when offline</td>
+  <td>To remember your settings between sessions. These stay on your device; only Depot ID and vehicle number are also sent to our servers, where needed, to fetch or report data for your depot</td>
 </tr>
 </table>
 
-<p>We do <strong>not</strong> collect contacts, SMS/call logs, photos from your gallery, microphone audio, or any data unrelated to the functions described above. The App contains no advertising SDKs and no third-party analytics or tracking SDKs.</p>
+<p>We do <strong>not</strong> collect your name, email address, username, password, contacts, SMS/call logs, photos from your gallery, microphone audio, or any data unrelated to the functions described above. The App contains no advertising SDKs and no third-party analytics or crash-tracking SDKs.</p>
 
 <h2>2. How We Use Information</h2>
 <ul>
-  <li>To authenticate you and keep your session secure</li>
-  <li>To display your live position, route, and nearby hazards on the map</li>
+  <li>To fetch and display the route, hazards, and rest-stop data published for your depot</li>
+  <li>To display your live position, route, and nearby hazards on the map (processed on-device)</li>
   <li>To alert you (visually and by voice) when you approach a known hazard or authorized rest stop</li>
-  <li>To sync the latest published routes and safety data for your depot, including for offline access</li>
+  <li>To relay an SOS alert — including your location, vehicle number, depot ID, destination, and optional name — to your depot if you trigger it</li>
   <li>To provide customer support if you contact us about an issue</li>
 </ul>
 
 <h2>3. How We Share Information</h2>
-<p>We do not sell your personal information. We share information only in these limited circumstances:</p>
+<p>We do not sell your information. We share it only in these limited circumstances:</p>
 <ul>
-  <li><strong>Your employer / depot administrator</strong> — your employer manages driver accounts and can see operational data (e.g. route assignments, sync status) associated with your account, as part of the logistics service they use.</li>
-  <li><strong>Service providers acting on our behalf</strong> — we use Mapbox for map rendering and navigation, and cloud infrastructure to host the App's backend and route data. These providers process data only to deliver the App's functionality and are not permitted to use it for their own purposes.</li>
-  <li><strong>Legal requirements</strong> — if required to comply with a valid legal process.</li>
+  <li><strong>Your depot</strong> — an SOS alert (location, vehicle number, destination, optional name) is relayed by email to the admins registered for the Depot ID in use, so they can respond to the emergency. To build the map image in that email, your SOS location is sent to Mapbox to generate a static map snapshot.</li>
+  <li><strong>OpenStreetMap</strong> — the visual map background you see while browsing the route is loaded directly by your device from OpenStreetMap's public map servers. This exposes your device's IP address and the approximate map area you are viewing (not your precise GPS location) to OpenStreetMap. If OpenStreetMap is unavailable, the App requests the map background through our backend instead.</li>
+  <li><strong>Law enforcement or government authorities</strong> — only in response to a valid court order, subpoena, or other legally binding request, or where necessary to investigate a safety incident (e.g. an SOS alert).</li>
 </ul>
 
 <h2>4. Data Retention</h2>
-<p>Account and route/hazard data is retained for as long as your account is active with your depot, and for a reasonable period afterward for operational and record-keeping purposes. Locally stored app preferences remain on your device until you clear the App's data or uninstall it. You or your depot administrator may request deletion of your account data at any time (see Section 7).</p>
+<ul>
+  <li><strong>SOS alerts</strong> — not stored on our servers at all. An SOS alert is sent once as an email to your depot's registered admins; we keep no database record of it.</li>
+  <li><strong>Server access logs</strong> — our servers keep standard request logs (which may include your Depot ID and device IP address) for up to 15 days for security and troubleshooting purposes, then they are deleted. We may shorten this further in the future.</li>
+  <li><strong>Locally stored app preferences</strong> — remain on your device until you clear the App's data or uninstall it, which removes them immediately.</li>
+</ul>
 
 <h2>5. Data Security</h2>
-<p>All data in transit between the App and our servers is encrypted (HTTPS/TLS). Backend access is restricted by authentication and per-depot access controls, and sensitive credentials are never stored in plain text.</p>
+<p>All data in transit between the App and our servers is encrypted (HTTPS/TLS).</p>
 
 <h2>6. Children's Privacy</h2>
-<p>The App is intended for use by employed commercial vehicle drivers and is not directed at, marketed to, or knowingly used by children. We do not knowingly collect information from anyone under the age of 18.</p>
+<p>The App is intended for use by commercial vehicle drivers and is not directed at, marketed to, or knowingly used by children. We do not knowingly collect information from anyone under the age of 18.</p>
 
 <h2>7. Your Choices &amp; Rights</h2>
 <ul>
-  <li>You can enable or disable location and camera access at any time through your device's system settings; note that disabling location will prevent map, navigation, and hazard-alert features from working.</li>
-  <li>You can request access to, correction of, or deletion of your personal data by contacting us at the email below, or through your depot administrator.</li>
+  <li>You can enable or disable location and camera access at any time through your device's system settings; note that disabling location will prevent map, navigation, hazard-alert, and SOS features from working.</li>
+  <li>Because the App has no personal account, stored data is either local to your device (cleared by uninstalling) or a short-lived server log (see Section 4). You or your depot administrator may contact us at the email below with any question about data we hold.</li>
   <li>You can stop all data collection by uninstalling the App.</li>
 </ul>
 
@@ -94,7 +95,7 @@
 <p>If you have questions about this Privacy Policy or how your data is handled, contact us at:<br>
 <strong>Email:</strong> saferoutesolutions2001@gmail.com</p>
 
-<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 1.0 — 4 July 2026</footer>
+<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 2.0 — 10 July 2026</footer>
 
 </body>
 </html>
