@@ -18,7 +18,7 @@
 <body>
 
 <h1>Privacy Policy — JRM SmartRoute</h1>
-<p class="meta">Effective date: 25 July 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
+<p class="meta">Effective date: 4 August 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
 
 <p>SafeRoute Solutions ("we", "us", "our") operates the JRM SmartRoute mobile application (the "App"), used by drivers to view company-published routes, hazard alerts, authorized rest stops, and route weather guidance. This policy explains what information the App collects from you, how it is used, and the choices you have.</p>
 
@@ -48,13 +48,18 @@
   <td>To scan a QR code for quick destination lookup. The camera feed is decoded on-device only; no image or video is ever stored, saved to your gallery, or transmitted to our servers</td>
 </tr>
 <tr>
+  <td>Microphone (voice question feature)</td>
+  <td>Active only while you are pressing/holding the voice-question button. Your spoken words are converted to text by your device's own speech-recognition service — we never receive or store the raw audio. The resulting text, along with basic details about your current trip (route, distance, and any nearby hazards), is sent to our servers to generate an answer</td>
+  <td>To let you ask a question by voice (e.g. "how far to destination", "any hazards ahead") and hear a spoken answer without taking your hands off the wheel or eyes off the road for longer than necessary</td>
+</tr>
+<tr>
   <td>App preferences (stored on your device only)</td>
   <td>Depot ID, vehicle number, selected destination, language preference, and whether hazard voice alerts are enabled</td>
   <td>To remember your settings between sessions. These stay on your device; only Depot ID and vehicle number are also sent to our servers, where needed, to fetch or report data for your depot</td>
 </tr>
 </table>
 
-<p>We do <strong>not</strong> collect your name, email address, username, password, contacts, SMS/call logs, photos from your gallery, microphone audio, or any data unrelated to the functions described above. The App contains no advertising SDKs and no third-party analytics or crash-tracking SDKs.</p>
+<p>We do <strong>not</strong> collect your name, email address, username, password, contacts, SMS/call logs, photos from your gallery, raw microphone audio (only the recognized text of a voice question, as described above), or any data unrelated to the functions described above. The App contains no advertising SDKs and no third-party analytics or crash-tracking SDKs.</p>
 
 <h2>2. How We Use Information</h2>
 <ul>
@@ -63,6 +68,7 @@
   <li>To alert you (visually and by voice) when you approach a known hazard or authorized rest stop</li>
   <li>To detect and confirm road bumps/potholes from motion-sensor and location data uploaded at the end of a journey, and add confirmed locations to the hazard data shown to drivers on that route</li>
   <li>To relay an SOS alert — including your location, vehicle number, depot ID, destination, and optional name — to your depot if you trigger it</li>
+  <li>To answer a question you ask by voice about your current trip (distance, weather, or nearby hazards) and speak the answer back to you</li>
   <li>To provide customer support if you contact us about an issue</li>
 </ul>
 
@@ -71,12 +77,14 @@
 <ul>
   <li><strong>Your depot</strong> — an SOS alert (location, vehicle number, destination, optional name) is relayed by email to the admins registered for the Depot ID in use, so they can respond to the emergency. To build the map image in that email, your SOS location is sent to Mapbox to generate a static map snapshot.</li>
   <li><strong>OpenStreetMap</strong> — the visual map background you see while browsing the route is loaded directly by your device from OpenStreetMap's public map servers. This exposes your device's IP address and the approximate map area you are viewing (not your precise GPS location) to OpenStreetMap. If OpenStreetMap is unavailable, the App requests the map background through our backend instead.</li>
+  <li><strong>Voice question feature</strong> — if you use it, the words you speak are converted to text by your device's own operating system (which, depending on your device, may itself use a cloud speech-recognition service such as Google's, entirely on your device's terms — we have no visibility into or control over that step). The recognized text and basic trip details are then sent to our servers, which pass the question to a third-party AI language model provider (currently DeepSeek, with Groq and OpenRouter as automatic backups if the primary is unavailable) to generate the spoken answer. None of this is linked to your name or identity.</li>
   <li><strong>Law enforcement or government authorities</strong> — only in response to a valid court order, subpoena, or other legally binding request, or where necessary to investigate a safety incident (e.g. an SOS alert).</li>
 </ul>
 
 <h2>4. Data Retention</h2>
 <ul>
   <li><strong>SOS alerts</strong> — not stored on our servers at all. An SOS alert is sent once as an email to your depot's registered admins; we keep no database record of it.</li>
+  <li><strong>Voice questions</strong> — not stored on our servers at all. Your question is processed and answered in a single request; we keep no database record of the question, the answer, or the trip details sent alongside it.</li>
   <li><strong>Road-bump reports (location + motion-sensor reading, uploaded at journey end)</strong> — if a report is <strong>not</strong> part of a confirmed hazard (that spot never reaches the confirmation bar described above), the individual report is automatically deleted after <strong>7 days</strong>. If a report <strong>does</strong> contribute to a confirmed hazard, the confirmed hazard (a location and category, not the individual reports) is kept as part of that route's hazard data as long as it keeps being reconfirmed by fresh reports, and is automatically removed after <strong>90 days</strong> with no reconfirmation (e.g. because the road was repaired).</li>
   <li><strong>Server access logs</strong> — our servers keep standard request logs (which may include your Depot ID and device IP address) for security and troubleshooting purposes, and these are automatically deleted after 90 days. You can also request their deletion sooner at any time (see Section 7).</li>
   <li><strong>Locally stored app preferences</strong> — remain on your device until you clear the App's data or uninstall it, which removes them immediately.</li>
@@ -90,7 +98,7 @@
 
 <h2>7. Your Choices &amp; Rights</h2>
 <ul>
-  <li>You can enable or disable location and camera access at any time through your device's system settings; note that disabling location will prevent map, navigation, hazard-alert, and SOS features from working.</li>
+  <li>You can enable or disable location, camera, and microphone access at any time through your device's system settings; note that disabling location will prevent map, navigation, hazard-alert, and SOS features from working, and disabling the microphone will only prevent the voice question feature specifically — everything else in the App works the same without it.</li>
   <li>Because the App has no personal account, stored data is either local to your device (cleared by uninstalling) or a short-lived server log (see Section 4). You or your depot administrator may contact us at the email below with any question about data we hold.</li>
   <li>To request deletion of any server log or other information associated with your use of the App, email <strong>saferoutesolutions2001@gmail.com</strong> with the subject "JRM SmartRoute Data Deletion Request." We will process the request after receiving sufficient information to locate the relevant data.</li>
   <li>You can stop all data collection by uninstalling the App.</li>
@@ -103,7 +111,7 @@
 <p>If you have questions about this Privacy Policy or how your data is handled, contact us at:<br>
 <strong>Email:</strong> saferoutesolutions2001@gmail.com</p>
 
-<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 3.2 — 25 July 2026</footer>
+<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 3.3 — 4 August 2026</footer>
 
 </body>
 </html>
