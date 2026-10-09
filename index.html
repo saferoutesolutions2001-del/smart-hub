@@ -18,7 +18,7 @@
 <body>
 
 <h1>Privacy Policy — JRM SmartRoute</h1>
-<p class="meta">Effective date: 9 October 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
+<p class="meta">Effective date: 10 October 2026 &nbsp;|&nbsp; App: JRM SmartRoute &nbsp;|&nbsp; Package: com.saferoutesolutions.jrm_smartroute &nbsp;|&nbsp; Publisher: SafeRoute Solutions</p>
 
 <p>SafeRoute Solutions ("we", "us", "our") operates the JRM SmartRoute mobile application (the "App"), used by drivers to view company-published routes, hazard alerts, authorized rest stops, and route weather guidance. This policy explains what information the App collects from you, how it is used, and the choices you have.</p>
 
@@ -38,13 +38,23 @@
   <td>So that your depot can see how many of its vehicles use the App each day, and so that we can check that the App is working and being used as intended. It is not used for advertising and is not sold or shared outside your depot (see Section 3)</td>
 </tr>
 <tr>
+  <td>Safe-driving score</td>
+  <td>After each journey of at least 5 km and 5 minutes, the App works out a score from 0 to 100 on your phone, using your speed against the speed limit, hard braking, hard starts and sharp turns. If you agree to sharing (you are asked on first use and can change this any time in Settings), it sends one small record per journey: Depot ID, vehicle number, journey end time, the score, distance, duration, the number of hard brakes, hard starts and sharp turns, the seconds spent over the speed limit and over the advised speed, and the App version. It does not send your route or location</td>
+  <td>To show you where you rank among the vehicles of your own depot, to let your depot's admins see depot-wide driving analytics, and to let your depot see which vehicles may need driver training support. The score belongs to a vehicle number, and one vehicle may be driven by several drivers. If you do not agree, scores stay on your phone only and no rank is shown</td>
+</tr>
+<tr>
+  <td>Stops at authorised rest stops</td>
+  <td>If you agree to sharing (the same choice as the safe-driving score), then when you stay at one of your depot's authorised rest stops for at least 10 minutes, the App sends one small record: Depot ID, vehicle number, which authorised stop it was, when the stop began, how long it lasted, and the App version. It does not send your location, and it never records stops anywhere else</td>
+  <td>So that your depot can see how many drivers use its authorised rest stops, and which long routes have none. The record belongs to a vehicle number. If you do not agree, nothing about your stops is sent</td>
+</tr>
+<tr>
   <td>Location information</td>
   <td>Precise (GPS) device location, used on-device for the map and hazard-proximity alerts. Location is sent to our servers (a) at the moment you press the in-app SOS button, and (b) once at the end of a journey, bundled with the road-bump readings described below</td>
   <td>To show your position on the route map and alert you to nearby hazards and authorized rest stops (all on-device); if you trigger SOS, to send your location, vehicle number, depot ID, and current destination, so your depot can respond to the emergency; and to confirm and warn other drivers about damaged road surfaces (see the row below)</td>
 </tr>
 <tr>
   <td>Motion sensor (accelerometer) data</td>
-  <td>While a journey is active, the app monitors your phone's built-in motion sensor for sudden impacts consistent with a road bump or pothole, alongside your speed and location at that moment. These readings are stored on your device and uploaded to our servers once, when the journey ends — never continuously or in real time</td>
+  <td>While a journey is active, the app monitors your phone's built-in motion sensor for sudden impacts consistent with a road bump or pothole, alongside your speed and location at that moment. These readings are stored on your device and uploaded to our servers once, when the journey ends — never continuously or in real time. The motion sensor is also used on your phone, during a journey, to notice hard braking, hard starts and swerves for your safe-driving score (see the next row). Raw sensor readings used only for the score are never uploaded</td>
   <td>To detect and confirm damaged road surfaces: a location is only ever treated as confirmed once a high number of independent reports, over a short time window, agree it's a real hazard, specifically to avoid one device's noisy reading being mistaken for a road defect. Confirmed locations are added to the hazard data shown to drivers on that route; a single report is never shown to anyone or acted on by itself</td>
 </tr>
 <tr>
@@ -75,13 +85,15 @@
   <li>To relay an SOS alert — including your location, vehicle number, depot ID, and destination — to your depot if you trigger it</li>
   <li>To answer a question you ask by voice about your current trip (distance, weather, or nearby hazards) and speak the answer back to you</li>
   <li>To count, for your depot, how many vehicles used the App each day (the daily app-usage record)</li>
+  <li>To work out a safe-driving score after each journey, show you your own rank within your depot, and give your depot's admins driving analytics and a weekly list of the 5 vehicles that may need training support</li>
+  <li>To give your depot's admins a weekly progress email: how many vehicles used the App, whether accident data is being kept up to date, how many authorised rest stops exist and how many vehicles stopped at one, and which long routes (100 km or more) have no authorised rest stop</li>
   <li>To provide customer support if you contact us about an issue</li>
 </ul>
 
 <h2>3. How We Share Information</h2>
 <p>We do not sell your information. We share it only in these limited circumstances:</p>
 <ul>
-  <li><strong>Your depot</strong> — the admins registered for your Depot ID can see, in our admin portal, how many vehicles used the App each day and which vehicle numbers they were (the daily app-usage record). An SOS alert (location, vehicle number, destination) is relayed by email to the same admins, so they can respond to the emergency. To build the map image in that email, your SOS location is sent to Mapbox to generate a static map snapshot.</li>
+  <li><strong>Your depot</strong> — the admins registered for your Depot ID can see, in our admin portal, how many vehicles used the App each day and which vehicle numbers they were (the daily app-usage record). If you agreed to share scores, they can also see each vehicle's safe-driving scores and journey details listed above, and every Monday they receive an email naming the 5 vehicles with the lowest scores (among vehicles with at least 5 journeys in the last 30 days) as vehicles that may need training support. That email states that a vehicle may have several drivers and that scores are a guide, not a record of fault. They also receive a separate weekly progress email with counts only (vehicles using the App, authorised-stop visits, accident-data upkeep, routes without an authorised stop), without naming individual vehicles. <strong>Other drivers in your depot never see your score or your vehicle number: they see only their own rank, for example "rank 14 of 48".</strong> An SOS alert (location, vehicle number, destination) is relayed by email to the same admins, so they can respond to the emergency. To build the map image in that email, your SOS location is sent to Mapbox to generate a static map snapshot.</li>
   <li><strong>OpenStreetMap</strong> — the visual map background you see while browsing the route is loaded directly by your device from OpenStreetMap's public map servers. This exposes your device's IP address and the approximate map area you are viewing (not your precise GPS location) to OpenStreetMap. If OpenStreetMap is unavailable, the App requests the map background through our backend instead.</li>
   <li><strong>Voice question feature</strong> — if you use it, the words you speak are converted to text by your device's own operating system (which, depending on your device, may itself use a cloud speech-recognition service such as Google's, entirely on your device's terms — we have no visibility into or control over that step). The recognized text and basic trip details are then sent to our servers, which pass the question to a third-party AI language model provider (currently DeepSeek, with Groq and OpenRouter as automatic backups if the primary is unavailable) to generate the spoken answer. None of this is linked to your name or identity.</li>
   <li><strong>Law enforcement or government authorities</strong> — only in response to a valid court order, subpoena, or other legally binding request, or where necessary to investigate a safety incident (e.g. an SOS alert).</li>
@@ -92,6 +104,8 @@
   <li><strong>SOS alerts</strong> — not stored on our servers at all. An SOS alert is sent once as an email to your depot's registered admins; we keep no database record of it.</li>
   <li><strong>Voice questions</strong> — not stored on our servers at all. Your question is processed and answered in a single request; we keep no database record of the question, the answer, or the trip details sent alongside it.</li>
   <li><strong>Road-bump reports (location + motion-sensor reading, uploaded at journey end)</strong> — if a report is <strong>not</strong> part of a confirmed hazard (that spot never reaches the confirmation bar described above), the individual report is automatically deleted after <strong>7 days</strong>. If a report <strong>does</strong> contribute to a confirmed hazard, the confirmed hazard (a location and category, not the individual reports) is kept as part of that route's hazard data as long as it keeps being reconfirmed by fresh reports, and is automatically removed after <strong>90 days</strong> with no reconfirmation (e.g. because the road was repaired).</li>
+  <li><strong>Authorised rest stop visit records</strong> — automatically deleted after a maximum of <strong>6 months</strong>.</li>
+  <li><strong>Safe-driving score records</strong> — automatically deleted after a maximum of <strong>6 months</strong>. Scores kept only on your phone stay there until you clear the App's data or uninstall it. You can also request deletion sooner (see Section 7).</li>
   <li><strong>Daily app-usage record (Depot ID, vehicle number, date, App version, number of opens)</strong> — automatically deleted after a maximum of <strong>6 months</strong>. You can also request deletion sooner (see Section 7).</li>
   <li><strong>Server access logs</strong> — our servers keep standard request logs (which may include your Depot ID, your vehicle number when an SOS alert is sent, and your device IP address) for security and troubleshooting purposes, and these are automatically deleted after 90 days. You can also request their deletion sooner at any time (see Section 7).</li>
   <li><strong>Locally stored app preferences</strong> — remain on your device until you clear the App's data or uninstall it, which removes them immediately.</li>
@@ -106,8 +120,9 @@
 <h2>7. Your Choices &amp; Rights</h2>
 <ul>
   <li>You can enable or disable location, camera, and microphone access at any time through your device's system settings; note that disabling location will prevent map, navigation, hazard-alert, and SOS features from working, and disabling the microphone will only prevent the voice question feature specifically — everything else in the App works the same without it.</li>
-  <li>Because the App has no personal account, stored data is either local to your device (cleared by uninstalling), a short-lived server log, or the daily app-usage record kept for at most 6 months (see Section 4). You or your depot administrator may contact us at the email below with any question about data we hold.</li>
+  <li>Because the App has no personal account, stored data is either local to your device (cleared by uninstalling), a short-lived server log, or the daily app-usage and safe-driving score records, each kept for at most 6 months (see Section 4). You or your depot administrator may contact us at the email below with any question about data we hold.</li>
   <li>To request deletion of any server log or other information associated with your use of the App, email <strong>saferoutesolutions2001@gmail.com</strong> with the subject "JRM SmartRoute Data Deletion Request." We will process the request after receiving sufficient information to locate the relevant data.</li>
+  <li>You can stop sharing your safe-driving score and your authorised-stop visits at any time in the App's Settings ("Share my driving data with my depot"). They then stay on your phone only, and your rank is no longer shown.</li>
   <li>You can stop all data collection by uninstalling the App.</li>
 </ul>
 
@@ -118,7 +133,7 @@
 <p>If you have questions about this Privacy Policy or how your data is handled, contact us at:<br>
 <strong>Email:</strong> saferoutesolutions2001@gmail.com</p>
 
-<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 3.5 — 9 October 2026</footer>
+<footer>SafeRoute Solutions — JRM SmartRoute Privacy Policy — Version 3.6 — 10 October 2026</footer>
 
 </body>
 </html>
